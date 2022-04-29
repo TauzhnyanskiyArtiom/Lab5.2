@@ -23,13 +23,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         startApp()
-
-        binding.vp2.adapter = MyAdapter(this, listOfFragments)
-
-
-        TabLayoutMediator(binding.tabLayout, binding.vp2) { tab, position ->
-            tab.text = "TAB ${(position + 1)}"
-        }.attach()
     }
 
     private fun initList() = listOf(
@@ -41,11 +34,11 @@ class MainActivity : AppCompatActivity() {
     private fun startApp() {
         binding.vp2.adapter = MyAdapter(this, listOfFragments)
 
-
         TabLayoutMediator(binding.tabLayout, binding.vp2) { tab, position ->
             tab.text = "TAB ${(position + 1)}"
         }.attach()
     }
+
 
     class MyAdapter(fragment: FragmentActivity, private val list: List<Fragment>) : FragmentStateAdapter(fragment) {
         override fun getItemCount() = list.size
