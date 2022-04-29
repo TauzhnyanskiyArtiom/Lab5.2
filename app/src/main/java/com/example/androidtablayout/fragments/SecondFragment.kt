@@ -1,10 +1,11 @@
-package com.example.androidtablayout
+package com.example.androidtablayout.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.androidtablayout.R
 
 class SecondFragment : Fragment() {
 
